@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html><head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Pinyon+Script&family=Space+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<style>
+  body { margin: 0; background: #C22B7C; color: #F6D4E6; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; letter-spacing: -0.011em; }
+  a { color: #F6D4E6; }
+  a:hover { color: #FFFFFF; }
+  @keyframes m-marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  @keyframes m-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+  @keyframes m-spin-rev { from { transform: rotate(360deg); } to { transform: rotate(0deg); } }
+  @keyframes m-rise { from { opacity: 0; transform: translateY(46px) rotate(-2deg); } to { opacity: 1; transform: none; } }
+  @keyframes m-slide-l { from { opacity: 0; transform: translateX(-44px) rotate(-3deg); } to { opacity: 1; transform: none; } }
+  @keyframes m-slide-r { from { opacity: 0; transform: translateX(44px) rotate(3deg); } to { opacity: 1; transform: none; } }
+  @keyframes m-pop { from { opacity: 0; transform: scale(.55) rotate(-14deg); } to { opacity: 1; transform: scale(1) rotate(0deg); } }
+  @keyframes m-drop { from { opacity: 0; transform: translateY(-34px) rotate(8deg); } to { opacity: 1; transform: none; } }
+  @keyframes m-wobble { 0%, 100% { transform: rotate(-3deg); } 50% { transform: rotate(3deg); } }
+  @keyframes m-bob { 0%, 100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-12px) rotate(1deg); } }
+  @keyframes m-float { 0%, 100% { transform: translateY(0) rotate(-8deg); } 50% { transform: translateY(-20px) rotate(8deg); } }
+  @keyframes m-wave { 0%, 100% { transform: translateY(0) rotate(-3deg); } 25% { transform: translateY(-13px) rotate(2deg); } 50% { transform: translateY(0) rotate(3deg); } 75% { transform: translateY(11px) rotate(-2deg); } }
+  @keyframes m-twinkle { 0%, 100% { opacity: .25; transform: scale(.7) rotate(-12deg); } 45% { opacity: 1; transform: scale(1.08) rotate(8deg); } }
+  @keyframes m-sway { 0%, 100% { transform: translateY(0) rotate(-1.2deg); } 50% { transform: translateY(-9px) rotate(1.2deg); } }
+  @keyframes m-jelly { 0%, 100% { transform: scale(1, 1); } 30% { transform: scale(1.08, .92); } 60% { transform: scale(.95, 1.05); } }
+  @keyframes m-blink { 0%, 92%, 100% { opacity: 1; } 96% { opacity: .25; } }
+  @keyframes m-roll { 0%, 18% { transform: translateY(0); } 25%, 43% { transform: translateY(-100%); } 50%, 68% { transform: translateY(-200%); } 75%, 93% { transform: translateY(-300%); } 100% { transform: translateY(-400%); } }
+</style>
+<script src="image-slot.js"></script>
+</helmet>
+<div style="max-width: 1320px; margin: 0 auto; padding: 0 clamp(14px, 3.5vw, 48px); overflow-x: hidden;">
+
+  <div style="min-height: 100svh; display: flex; flex-direction: column;">
+  
+
+  
+
+  <section style="position: relative; display: flex; flex-direction: column; justify-content: center; gap: clamp(10px, 1.6vw, 20px); padding: clamp(12px, 2.2vw, 34px) 0 0;">
+    <h1 style="margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: min(10.6vw, 142px); line-height: .9; letter-spacing: -.05em; white-space: nowrap; text-transform: uppercase; color: #FFFACD; text-align: center; animation: m-drop .8s cubic-bezier(.2,1.4,.4,1) .05s both">Marion Fanodira</h1>
+    <div style="display: flex; align-items: center; justify-content: space-between; gap: clamp(10px, 2vw, 34px); flex-wrap: wrap; animation: m-rise .9s cubic-bezier(.2,.9,.2,1) .35s both;">
+      <span style="font-weight: 600; font-size: clamp(12.5px, 1.3vw, 18px); letter-spacing: -.015em; color: #FFFACD">Social media &amp; direction artistique</span>
+      <img src="assets/xs-ic-sparkle.png" alt="" style="width: 37px; height: 40px; animation: m-twinkle 3.4s ease-in-out infinite">
+      <span style="font-size: clamp(12.5px, 1.3vw, 18px); letter-spacing: -.01em; color: #FFFACD; font-family: -apple-system; font-weight: 600">Imaginer, créer et amplifier votre présence digitale</span>
+    </div>
+  </section><section id="vitrine" style="position: relative; flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; padding: clamp(8px, 1.6vw, 20px) 0 0;">
+    
+    <div style="position: relative; overflow: hidden; padding: 12px 0; -webkit-mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent); mask-image: linear-gradient(90deg, transparent, #000 18%, #000 82%, transparent);">
+      <div style="display: flex; width: max-content; gap: 8px; padding: 0 4px; animation: m-marquee 46s linear infinite; will-change: transform;" sc-camel-on-click="{{ openProject }}" style-hover="animation-play-state: paused;">
+        <div style="flex: 0 0 auto; width: min(21vw, 300px, 33vh); min-width: 150px; transition: transform .5s cubic-bezier(.22,1,.36,1);" style-hover="transform: translateY(-6px);" data-project="perruche" role="button" tabindex="0">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border: 9px solid #E2619F; border-radius: 16px; box-sizing: border-box;"><img src="assets/perruche-cover.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></div>
+          
+        </div>
+        <div style="flex: 0 0 auto; width: min(21vw, 300px, 33vh); min-width: 150px; transition: transform .5s cubic-bezier(.22,1,.36,1);" style-hover="transform: translateY(-6px);" data-project="nyc" role="button" tabindex="0">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border: 9px solid #E2619F; border-radius: 16px; box-sizing: border-box;"><img src="assets/nyc-0.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"><sc-if value="{{ nycVideo }}" hint-placeholder-val="{{ false }}"><video src="{{ nycVideo }}" sc-camel-auto-play="{{ true }}" muted="{{ true }}" loop="{{ true }}" sc-camel-plays-inline="{{ true }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video></sc-if></div>
+          
+        </div>
+        
+        <div style="flex: 0 0 auto; width: min(21vw, 300px, 33vh); min-width: 150px; transition: transform .5s cubic-bezier(.22,1,.36,1);" style-hover="transform: translateY(-6px);" data-project="perruche-social" role="button" tabindex="0">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border: 9px solid #E2619F; border-radius: 16px; box-sizing: border-box;"><img src="assets/perruche-sale.png" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"><sc-if value="{{ socialVideo }}" hint-placeholder-val="{{ false }}"><video src="{{ socialVideo }}" sc-camel-auto-play="{{ true }}" muted="{{ true }}" loop="{{ true }}" sc-camel-plays-inline="{{ true }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video></sc-if></div>
+          
+        </div><div style="flex: 0 0 auto; width: min(21vw, 300px, 33vh); min-width: 150px; transition: transform .5s cubic-bezier(.22,1,.36,1);" style-hover="transform: translateY(-6px);" data-project="fruits" role="button" tabindex="0">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border: 9px solid #E2619F; border-radius: 16px; box-sizing: border-box;"><img src="assets/rhode-cover.png" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></div></div>
+        <div style="flex: 0 0 auto; width: min(21vw, 300px, 33vh); min-width: 150px; transition: transform .5s cubic-bezier(.22,1,.36,1);" style-hover="transform: translateY(-6px);" data-project="tiktok" role="button" tabindex="0">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border: 9px solid #E2619F; border-radius: 16px; box-sizing: border-box;"><img src="assets/tiktok-1.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"><sc-if value="{{ tiktokVideo }}" hint-placeholder-val="{{ false }}"><video src="{{ tiktokVideo }}" sc-camel-auto-play="{{ true }}" muted="{{ true }}" loop="{{ true }}" sc-camel-plays-inline="{{ true }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video></sc-if></div></div>
+        <div style="flex: 0 0 auto; width: min(21vw, 300px, 33vh); min-width: 150px; transition: transform .5s cubic-bezier(.22,1,.36,1);" style-hover="transform: translateY(-6px);" data-project="perruche" role="button" tabindex="0">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border: 9px solid #E2619F; border-radius: 16px; box-sizing: border-box;"><img src="assets/perruche-cover.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></div></div>
+        <div style="flex: 0 0 auto; width: min(21vw, 300px, 33vh); min-width: 150px; transition: transform .5s cubic-bezier(.22,1,.36,1);" style-hover="transform: translateY(-6px);" data-project="nyc" role="button" tabindex="0">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border: 9px solid #E2619F; border-radius: 16px; box-sizing: border-box;"><img src="assets/nyc-0.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"><sc-if value="{{ nycVideo }}" hint-placeholder-val="{{ false }}"><video src="{{ nycVideo }}" sc-camel-auto-play="{{ true }}" muted="{{ true }}" loop="{{ true }}" sc-camel-plays-inline="{{ true }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video></sc-if></div></div>
+        <div style="flex: 0 0 auto; width: min(21vw, 300px, 33vh); min-width: 150px; transition: transform .5s cubic-bezier(.22,1,.36,1);" style-hover="transform: translateY(-6px);" data-project="perruche-social" role="button" tabindex="0">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border: 9px solid #E2619F; border-radius: 16px; box-sizing: border-box;"><img src="assets/perruche-sale.png" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"><sc-if value="{{ socialVideo }}" hint-placeholder-val="{{ false }}"><video src="{{ socialVideo }}" sc-camel-auto-play="{{ true }}" muted="{{ true }}" loop="{{ true }}" sc-camel-plays-inline="{{ true }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video></sc-if></div></div>
+        <div style="flex: 0 0 auto; width: min(21vw, 300px, 33vh); min-width: 150px; transition: transform .5s cubic-bezier(.22,1,.36,1);" style-hover="transform: translateY(-6px);" data-project="fruits" role="button" tabindex="0">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border: 9px solid #E2619F; border-radius: 16px; box-sizing: border-box;"><img src="assets/rhode-cover.png" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></div></div>
+        <div style="flex: 0 0 auto; width: min(21vw, 300px, 33vh); min-width: 150px; transition: transform .5s cubic-bezier(.22,1,.36,1);" style-hover="transform: translateY(-6px);" data-project="tiktok" role="button" tabindex="0">
+          <div style="position: relative; width: 100%; aspect-ratio: 4 / 5; overflow: hidden; border: 9px solid #E2619F; border-radius: 16px; box-sizing: border-box;"><img src="assets/tiktok-1.jpg" alt="" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"><sc-if value="{{ tiktokVideo }}" hint-placeholder-val="{{ false }}"><video src="{{ tiktokVideo }}" sc-camel-auto-play="{{ true }}" muted="{{ true }}" loop="{{ true }}" sc-camel-plays-inline="{{ true }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;"></video></sc-if></div></div>
+      </div>
+    </div>
+  </section>
+  <div style="display: flex; justify-content: center; padding: 2px 0 clamp(10px, 1.6vw, 18px); animation: m-pop .9s cubic-bezier(.2,1.3,.4,1) .5s both;">
+    <a href="#contact" style="position: relative; display: inline-flex; align-items: center; gap: clamp(9px, 1.2vw, 14px); border-radius: 999px; padding: 6px clamp(18px, 2.2vw, 28px) 6px 6px; text-decoration-line: none; transition: transform .3s cubic-bezier(.2,1.5,.4,1), background .3s; background-color: #B83365" style-hover="transform: translateY(-4px); background: #FFFFFF;">
+      <span style="position: relative; flex: 0 0 auto; width: clamp(38px, 4vw, 48px); height: clamp(38px, 4vw, 48px); border-radius: 50%; overflow: hidden; background: #E2619F; display: block; animation: m-sway 6.5s ease-in-out infinite;">
+        <img src="assets/marion-sticker.png" alt="Marion" style="position: absolute; left: 50%; top: 8%; width: 132%; transform: translateX(-50%); display: block;">
+      </span>
+      <span style="font-weight: 600; font-size: clamp(15px, 1.6vw, 20px); letter-spacing: -.02em; color: #FFFACD">Contact</span>
+      
+      
+    </a>
+  </div>
+  <sc-if value="{{ catOpen }}" hint-placeholder-val="{{ false }}">
+    <div style="position: fixed; inset: 0; z-index: 80; background: #C22B7C; overflow: auto; padding: clamp(20px, 4vw, 60px); animation: m-rise .4s cubic-bezier(.22,1,.36,1) both;">
+      <div style="max-width: 1100px; margin: 0 auto;">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 20px; margin-bottom: clamp(20px, 3vw, 38px);">
+          <h2 style="margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: clamp(28px, 5vw, 64px); line-height: 1; letter-spacing: -.04em; color: #FFFACD;">{{ catTitle }}</h2>
+          <button type="button" sc-camel-on-click="{{ closeCat }}" aria-label="Fermer" style="flex: 0 0 auto; position: relative; width: clamp(44px, 4.6vw, 58px); height: clamp(44px, 4.6vw, 58px); border-radius: 999px; border: 2px solid #FFFACD; background: transparent; color: #FFFACD; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(16px, 1.8vw, 22px); font-weight: 300; line-height: 1; cursor: pointer; transition: transform .35s cubic-bezier(.2,1.5,.4,1), background .3s, color .3s;" style-hover="background: #FFFACD; color: #C22B7C; transform: rotate(90deg);">✕</button>
+        </div>
+        <p style="margin: 0 0 clamp(20px, 3vw, 36px); width: 100%; text-align: justify; text-wrap: pretty; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(14.5px, 1.3vw, 18px); line-height: 1.5; color: #FFF1F6;">{{ catText }}</p>
+        <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr)); gap: clamp(14px, 2vw, 26px);">
+          <sc-for list="{{ catCards }}" as="c" hint-placeholder-count="3">
+            <div sc-camel-on-click="{{ c.onClick }}" style="cursor: pointer; display: flex; flex-direction: column; gap: 10px;" style-hover="transform: translateY(-6px);">
+              <div style="{{ c.thumbStyle }}">
+                <sc-if value="{{ c.video }}" hint-placeholder-val="{{ false }}">
+                  <video src="{{ c.video }}" data-clip="{{ c.clip }}" sc-camel-auto-play="{{ true }}" muted="{{ true }}" loop="{{ true }}" sc-camel-plays-inline="{{ true }}" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; border-radius: inherit;"></video>
+                </sc-if>
+              </div>
+              <span style="{{ c.labelStyle }}">{{ c.title }}</span>
+            </div>
+          </sc-for>
+        </div>
+        <sc-if value="{{ catEmpty }}" hint-placeholder-val="{{ false }}">
+          <p style="margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(14.5px, 1.3vw, 18px); color: #FFF1F6; opacity: .9;">Projets en cours d'ajout.</p>
+        </sc-if>
+      </div>
+    </div>
+  </sc-if>
+
+  <sc-if value="{{ modalOpen }}" hint-placeholder-val="{{ false }}">
+    <div sc-camel-on-click="{{ closeProject }}" style="position: fixed; inset: 0; z-index: 95; background: rgba(90,6,50,.62); backdrop-filter: blur(4px); display: flex; align-items: flex-start; justify-content: center; padding: clamp(14px, 3vw, 48px); overflow: auto; animation: m-rise .35s cubic-bezier(.22,1,.36,1) both;">
+      <div sc-camel-on-click="{{ stopClose }}" style="position: relative; width: min(100%, 1000px); background: #FDF3CE; border: 3px solid #A0165C; border-radius: 6px; box-shadow: 10px 10px 0 #A0165C; padding: clamp(20px, 3vw, 44px); animation: m-pop .45s cubic-bezier(.2,1.3,.4,1) both;">
+        <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; margin-bottom: clamp(14px, 2vw, 24px);">
+          <h3 style="margin: 0; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 700; font-size: clamp(24px, 3.4vw, 46px); line-height: 1.02; letter-spacing: -.035em; color: #A0165C;">{{ modalTitle }}</h3>
+          <button type="button" sc-camel-on-click="{{ closeProject }}" aria-label="Fermer" style="flex: 0 0 auto; width: clamp(40px, 4.2vw, 52px); height: clamp(40px, 4.2vw, 52px); border-radius: 999px; border: 2px solid #A0165C; background: transparent; color: #A0165C; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: clamp(15px, 1.6vw, 20px); font-weight: 300; line-height: 1; cursor: pointer; transition: transform .35s cubic-bezier(.2,1.5,.4,1), background .3s, color .3s;" style-hover="background: #A0165C; color: #FDF3CE; transform: rotate(90deg);">✕</button>
+        </div>
+        <p style="margin: 0 0 clamp(16px, 2.2vw, 24px); width: 100%; text-align: justify; text-wrap: pretty; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif; font-weight: 500; font-size: clamp(14.5px, 1.3vw, 17px); line-height: 1.5; color: #8C3A63; white-space: pre-line;">{{ modalDesc }}</p>
+        <sc-if value="{{ modalVideoTop }}" hint-placeholder-val="{{ false }}">
+          <video src="{{ modalVideoSrc }}" controls="{{ true }}" muted="{{ true }}" sc-camel-default-muted="{{ true }}" sc-camel-disable-picture-in-picture="{{ true }}" sc-camel-controls-list="nodownload noplaybackrate" sc-camel-plays-inline="{{ true }}" style="display: block; width: min(100%, 420px); margin: 0 auto clamp(10px, 1.4vw, 16px); border-radius: 4px; background: #1a1a1a;"></video>
+        </sc-if>
+        <sc-if value="{{ modalHero }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ modalHeroStyle }}"></div>
+        </sc-if>
+        <div style="{{ modalGridStyle }}">
+          <sc-for list="{{ modalPhotos }}" as="ph" hint-placeholder-count="3">
+            <div style="{{ ph.cell }}"><div style="{{ ph.style }}"></div></div>
+          </sc-for>
+        </div>
+        <sc-if value="{{ modalVideoBottom }}" hint-placeholder-val="{{ false }}">
+          <video src="{{ modalVideoSrc }}" controls="{{ true }}" muted="{{ true }}" sc-camel-default-muted="{{ true }}" sc-camel-disable-picture-in-picture="{{ true }}" sc-camel-controls-list="nodownload noplaybackrate" sc-camel-plays-inline="{{ true }}" style="display: block; width: 100%; margin-top: clamp(10px, 1.4vw, 16px); border-radius: 4px; background: #1a1a1a;"></video>
+        </sc-if>
+
+      </div>
+    </div>
+  </sc-if>
+
+  </div>
+
+  
+
+  
+
+  
+
+  <section id="projets" style="position: relative; display: flex; align-items: center; justify-content: center; padding: clamp(18px, 3vw, 40px) 0;">
+    <div style="position: relative; width: 100%; max-width: 900px; background: #FDF3CE; border: 3px solid #A0165C; border-radius: 6px; box-shadow: 10px 10px 0 #A0165C, 0 24px 60px rgba(90,6,50,.22); padding: clamp(36px, 5.5vw, 72px) clamp(22px, 4vw, 56px); display: flex; flex-direction: column; align-items: center; gap: clamp(10px, 1.6vw, 18px);">
+      <img src="assets/deco-btn-pink.png" alt="" style="position: absolute; left: -26px; top: -24px; width: clamp(44px, 5vw, 66px); animation: m-bob 6.5s ease-in-out infinite; pointer-events: none;">
+      <img src="assets/deco-blink-a.png" alt="" style="position: absolute; right: -22px; top: -28px; width: clamp(40px, 4.6vw, 60px); animation: m-twinkle 3.2s ease-in-out infinite; pointer-events: none;">
+      <img src="assets/deco-star-yellow.png" alt="" style="position: absolute; left: -30px; bottom: 12%; width: clamp(36px, 4.2vw, 54px); animation: m-float 8s ease-in-out infinite; pointer-events: none;">
+      <img src="assets/deco-btn-yellow.png" alt="" style="position: absolute; right: -28px; bottom: -22px; width: clamp(42px, 4.8vw, 62px); animation: m-sway 7s ease-in-out infinite; pointer-events: none;">
+      <img src="assets/deco-blink-b.png" alt="" style="position: absolute; left: 46%; bottom: -30px; width: clamp(30px, 3.4vw, 44px); animation: m-twinkle 4.1s ease-in-out 1.2s infinite; pointer-events: none;">
+    <sc-for list="{{ menu }}" as="m" hint-placeholder-count="3">
+      <div style="display: flex; flex-direction: column; align-items: center; width: 100%;">
+        <div sc-camel-on-click="{{ m.onClick }}" style="{{ m.style }}" style-hover="transform: scale(1.06);">{{ m.label }}</div>
+        <div style="{{ m.bodyStyle }}">
+          <p style="{{ m.textStyle }}">{{ m.text }}</p>
+        </div>
+      </div>
+    </sc-for>
+    </div>
+  </section>
+
+  <section id="dossiers" style="position: relative; color: #3d3d40; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); padding-left: max(clamp(14px, 3.5vw, 48px), calc(50vw - 660px + clamp(14px, 3.5vw, 48px))); padding-right: max(clamp(14px, 3.5vw, 48px), calc(50vw - 660px + clamp(14px, 3.5vw, 48px))); padding-top: clamp(16px, 2.4vw, 32px); padding-bottom: clamp(18px, 2.6vw, 36px); margin-top: 0; margin-bottom: clamp(10px, 1.6vw, 20px);">
+    <div style="display: flex; flex-direction: column;">
+      <sc-for list="{{ folders }}" as="f" hint-placeholder-count="6">
+        <div style="{{ f.panelStyle }}">
+          <div sc-camel-on-click="{{ f.onClick }}" style="{{ f.headStyle }}">
+            <span style="{{ f.titleStyle }}">{{ f.title }}</span>
+            <span style="{{ f.numStyle }}">{{ f.num }}</span>
+          </div>
+          <div style="{{ f.bodyStyle }}">
+            <div style="{{ f.gridStyle }}">
+              <div style="min-width: 0; display: flex; flex-direction: column; gap: clamp(18px, 2.4vw, 30px);">
+                <div style="display: flex; flex-direction: column; gap: clamp(14px, 1.8vw, 22px);">
+                  <sc-for list="{{ f.blocks }}" as="bl" hint-placeholder-count="3">
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                      <sc-if value="{{ bl.heading }}" hint-placeholder-val="{{ true }}">
+                        <div style="{{ bl.hStyle }}">{{ bl.heading }}</div>
+                      </sc-if>
+                      <sc-if value="{{ bl.sub }}" hint-placeholder-val="{{ true }}">
+                        <div style="{{ bl.subStyle }}">{{ bl.sub }}</div>
+                      </sc-if>
+                      <p style="{{ bl.pStyle }}">{{ bl.text }}</p>
+                    </div>
+                  </sc-for>
+                </div>
+                <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                  <sc-for list="{{ f.tags }}" as="tg" hint-placeholder-count="0">
+                    <span style="{{ tg.style }}">{{ tg.label }}</span>
+                  </sc-for>
+                </div>
+              </div>
+              <sc-if value="{{ f.hasMedia }}" hint-placeholder-val="{{ true }}">
+                <div style="{{ f.mediaWrapStyle }}">
+                  <div style="{{ f.mediaStyle }}">
+                    <sc-for list="{{ f.slides }}" as="sl" hint-placeholder-count="0">
+                      <div style="{{ sl.style }}"></div>
+                    </sc-for>
+                  </div>
+                  <img src="assets/tape-pink.png" alt="" style="position: absolute; left: -20px; top: 4px; width: 118px; transform: rotate(-34deg); opacity: .95; filter: drop-shadow(0 3px 6px rgba(60,10,30,.22)); pointer-events: none;">
+                  <img src="assets/tape-pink.png" alt="" style="position: absolute; right: -20px; bottom: 4px; width: 108px; transform: rotate(-30deg); opacity: .95; filter: drop-shadow(0 3px 6px rgba(60,10,30,.22)); pointer-events: none;">
+                </div>
+              </sc-if>
+            </div>
+          </div>
+        </div>
+      </sc-for>
+      
+    </div>
+  </section>
+
+  
+
+  <section id="contact" style="position: relative; background: #A0165C; border-radius: clamp(22px, 3vw, 38px); box-shadow: 0 24px 60px rgba(90,6,50,.28); padding: clamp(44px, 6.5vw, 92px) clamp(24px, 4vw, 64px); margin: clamp(12px, 2vw, 26px) 0 clamp(14px, 2vw, 22px); overflow: hidden; text-align: center; animation: m-rise linear both; animation-timeline: view(); animation-range: entry 0% entry 85%;">
+    <div style="width: 42px; height: 1px; background: rgba(255,250,205,.45); margin: 0 auto clamp(22px, 3.4vw, 38px);"></div>
+    <img src="assets/st-hibiscus.png" alt="" style="position: absolute; left: 4%; top: clamp(40px, 7vw, 90px); width: clamp(54px, 6vw, 86px); opacity: .9; animation: m-float 9s ease-in-out infinite; pointer-events: none;">
+    <img src="assets/sm-ic-phone.png" alt="" style="position: absolute; right: 4%; bottom: clamp(20px, 4vw, 54px); width: clamp(76px, 9vw, 128px); opacity: .9; animation: m-bob 6s ease-in-out infinite; pointer-events: none;">
+    <div style="position: relative; max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: clamp(18px, 2.4vw, 26px);">
+      <span style="font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: #FFFACD">Contact</span>
+      <h2 style="margin: 0; font-weight: 600; font-size: clamp(38px, 6.4vw, 86px); line-height: 1; letter-spacing: -.04em; color: #FFFACD; text-wrap: balance">On se <span style="display: inline-block; animation: m-wobble 3.2s ease-in-out infinite;">parle</span> ?</h2>
+      <p style="margin: 0; max-width: 46ch; font-size: clamp(15px, 1.4vw, 18px); line-height: 1.5; letter-spacing: -.01em; color: #FFFACD; text-wrap: pretty">Missions freelance, collaborations ou postes en interne : le plus simple est de m'écrire sur LinkedIn.</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; margin-top: 6px;">
+        <a href="{{ linkedin }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: #FFFACD; color: #A0165C; padding: 15px 30px; border-radius: 999px; font-weight: 500; font-size: 16px; letter-spacing: -.01em; text-decoration-line: none; transition: transform .3s cubic-bezier(.2,1.5,.4,1), background .3s;" style-hover="background: #FFFFFF; transform: translateY(-3px);">Marion sur LinkedIn</a>
+        <a href="mailto:marionfanodira@gmail.com" style="display: inline-flex; align-items: center; gap: 10px; border: 1px solid rgba(255,250,205,.55); color: #FFFACD; padding: 15px 30px; border-radius: 999px; font-weight: 500; font-size: 16px; letter-spacing: -.01em; text-decoration-line: none; transition: transform .3s cubic-bezier(.2,1.5,.4,1), background .3s, color .3s;" style-hover="background: #FFFACD; color: #A0165C; transform: translateY(-3px);">marionfanodira@gmail.com</a>
+        <span style="font-size: 14px; color: #FFFACD; letter-spacing: -.01em">Réponse sous 48 h</span>
+      </div>
+    </div>
+  </section>
+
+  <footer style="display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-bottom: 34px; font-size: 12px; letter-spacing: .06em; text-transform: uppercase; color: #FFF1F6; font-weight: 600; font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif">
+    <span style="color: #FFFACD">Marion Fanodira — Social media &amp; direction artistique</span>
+    <span style="animation: m-blink 6s ease-in-out infinite; color: #FFFACD">2026 ✿</span>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{&quot;linkedin&quot;:{&quot;editor&quot;:&quot;text&quot;,&quot;default&quot;:&quot;https://www.linkedin.com/in/marion-andriamamohitrarivo-fanodira/&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Contact&quot;}}">
+class Component extends DCLogic {
+  state = { open: 0, slide: 0, sub: -1 };
+
+  componentDidMount() {
+    this._t = setInterval(() => this.setState((s) => ({ slide: s.slide + 1 })), 3400);
+  }
+
+  componentDidUpdate() {
+    this.forceMute();
+    const v = null;
+    if (v) this.loadVideo(v);
+  }
+
+  forceMute() {
+    document.querySelectorAll("video").forEach((v) => {
+      v.muted = true;
+      v.volume = 0;
+      if (v.autoplay && v.paused && v.currentSrc) v.play().catch(() => {});
+      const clip = parseFloat(v.dataset.clip || "0");
+      if (clip && !v.dataset.cliplock) {
+        v.dataset.cliplock = "1";
+        v.addEventListener("timeupdate", () => { if (v.currentTime >= clip) v.currentTime = 0; });
+      }
+      if (!v.dataset.mlock) {
+        v.dataset.mlock = "1";
+        v.addEventListener("volumechange", () => { v.muted = true; v.volume = 0; });
+      }
+    });
+  }
+
+  loadVideo(src) {
+    if (!src) return;
+    this._urls = this._urls || {};
+    if (src in this._urls) return;
+    this._urls[src] = null;
+    fetch(src)
+      .then((r) => r.blob())
+      .then((b) => {
+        this._urls[src] = URL.createObjectURL(b);
+        this.forceUpdate();
+        setTimeout(() => this.forceMute(), 60);
+      })
+      .catch(() => {});
+  }
+
+  vid(src) {
+    this._urls = this._urls || {};
+    if (src && !(src in this._urls)) this.loadVideo(src);
+    return (src && this._urls[src]) || "";
+  }
+
+  componentWillUnmount() {
+    clearInterval(this._t);
+    Object.values(this._urls || {}).forEach((u) => u && URL.revokeObjectURL(u));
+  }
+
+  renderVals() {
+    const ease = "cubic-bezier(.22,1,.36,1)";
+    const F = (o) => Object.assign({ fontFamily: "-apple-system, BlinkMacSystemFont, 'SF Pro Display', 'SF Pro Text', 'Helvetica Neue', Helvetica, Arial, sans-serif" }, o);
+    const PROJECTS = {
+      perruche: { cover: (window.__resources&&window.__resources.a_perruche_cover_jpg||"./min/perruche-cover.jpg"), title: "Perruche - Campagne de la collection printemps-été (2023)", desc: "Projet : Direction Artistique du shoot de la campagne \nDate : Avril 2023",
+        photos: [(window.__resources&&window.__resources.a_perruche_0_jpg||"./min/perruche-0.jpg"), (window.__resources&&window.__resources.a_perruche_1_jpg||"./min/perruche-1.jpg"), (window.__resources&&window.__resources.a_perruche_2_jpg||"./min/perruche-2.jpg"), (window.__resources&&window.__resources.a_perruche_3_jpg||"./min/perruche-3.jpg")] },
+      nyc: { cover: (window.__resources&&window.__resources.a_nyc_0_jpg||"./min/nyc-0.jpg"), title: "New York City - Toujours lever les yeux", desc: "New York City, Été 2024. Toujours lever les yeux.\nDate : Août 2024",
+        photos: [(window.__resources&&window.__resources.a_nyc_1_jpg||"./min/nyc-1.jpg"), (window.__resources&&window.__resources.a_nyc_2_jpg||"./min/nyc-2.jpg"), (window.__resources&&window.__resources.a_nyc_3_jpg||"./min/nyc-3.jpg")] },
+      "perruche-social": { cover: (window.__resources&&window.__resources.a_perruche_social_1_png||"./min/perruche-social-1.jpg"), title: "Perruche - Campagne Réseaux Sociaux (2023)", desc: "Projet : reprendre les réseaux sociaux de la boutique depuis zéro pour leur donner une identité cohérente et désirable, et créer des contenus qui traduisent l’état d’esprit des produits vendus.\nDate : Mars - Juin 2023",
+        contain: true, photos: [(window.__resources&&window.__resources.a_perruche_social_1_png||"./min/perruche-social-1.jpg"), (window.__resources&&window.__resources.a_perruche_social_2_png||"./min/perruche-social-2.jpg")] },
+      fruits: { cover: (window.__resources&&window.__resources.a_rhode_cover_png||"./min/rhode-cover.jpg"), hero: (window.__resources&&window.__resources.a_rhode_campagne_png||"./min/rhode-campagne.jpg"), title: "Rhode - Le fruit comme matière (mock campaign)", desc: "Projet : Penser le fruit autour des produits cosmétique. Chaque teinte trouve son fruit, sa texture et sa lumière.\nOutils : Photoshop, Illustrator, ChatGPT.\nDate : septembre 2025.",
+        photos: [(window.__resources&&window.__resources.a_rhode_peche_png||"./min/rhode-peche.jpg"), (window.__resources&&window.__resources.a_rhode_cerise_png||"./min/rhode-cerise.jpg"), (window.__resources&&window.__resources.a_rhode_pistache_png||"./min/rhode-pistache.jpg")] },
+      ntu: { cover: (window.__resources&&window.__resources.a_ntu_atelier_jpg||"./min/ntu-atelier.jpg"), focus: "78% center", title: "NTU (Nottingham Trent University) — Global Summer School Program for Design & Innovation in Business",
+        desc: "Conception de produits innovants en équipe multiculturelle et cours de photographie\nDate : Eté 2024",
+        photos: [(window.__resources&&window.__resources.a_ntu_equipe_jpg||"./min/ntu-equipe.jpg"), (window.__resources&&window.__resources.a_ntu_moodboard_png||"./min/ntu-moodboard.jpg"), (window.__resources&&window.__resources.a_ntu_maquettes_jpg||"./min/ntu-maquettes.jpg"), (window.__resources&&window.__resources.a_ntu_campus_jpg||"./min/ntu-campus.jpg")] },
+      bourbon: { cover: (window.__resources&&window.__resources.a_bourbon_catalogue_jpg||"./min/bourbon-catalogue.jpg"), focus: "center 30%", title: "Excellence Bourbon - Etude du marché de la vanille et création d'un catalogue produits", desc: "Date : Janvier 2021",
+        contain: true, wide: true, photos: [(window.__resources&&window.__resources.a_bourbon_etude_1_png||"./min/bourbon-etude-1.jpg"), (window.__resources&&window.__resources.a_bourbon_etude_2_png||"./min/bourbon-etude-2.jpg")] },
+      empreintes: { cover: (window.__resources&&window.__resources.a_empreintes_1_png||"./min/empreintes-1.jpg"), focus: "center 70%", title: "Empreintes d'Avenir - Sensibiliser aux gestes verts (2023)", desc: "Projet : six mois au sein d'Empreintes d'Avenir à créer différents contenus de sensibilisation, comme une carte de vœux vidéo, des publications LinkedIn et une newsletter, pour rappeler pourquoi chaque petit geste compte.\nDate : 2022 - 2023",
+        contain: true,
+        photos: [(window.__resources&&window.__resources.a_empreintes_1_png||"./min/empreintes-1.jpg"), (window.__resources&&window.__resources.a_empreintes_2_png||"./min/empreintes-2.jpg")],
+        media: [{ ratio: "4 / 5", fit: "cover", pos: "center top" }, { ratio: "4 / 5", fit: "contain" }] },
+      antalis: { cover: (window.__resources&&window.__resources.a_antalis_cover_jpg||"./min/antalis-cover.jpg"), focus: "center", title: "Antalis - Développement d'une communauté LinkedIn (2025)",
+        desc: "Projet : faire grandir la communauté LinkedIn de la marque jusqu'au cap des 50 000 abonnés, puis concevoir des rendez-vous éditoriaux, comme la Love Paper Week, pensés pour créer de l'engagement et faire participer l'audience.\nDate : 2023 - 2025",
+        media: [{ ratio: "4 / 5", fit: "cover", pos: "center top" }, { ratio: "4 / 5", fit: "contain" }],
+        photos: [(window.__resources&&window.__resources.a_antalis_50k_jpg||"./min/antalis-50k.jpg"), (window.__resources&&window.__resources.a_antalis_lovepaper_png||"./min/antalis-lovepaper.jpg")] },
+      latribune: { title: "La Tribune - Visuels et identité graphique des évènements (2026)",
+        desc: "Projet : créer les visuels de promotion des évènements organisés par La Tribune et définir leur identité graphique, du choix des couleurs aux typographies et aux traitements d'image, pour que chaque rendez-vous reste reconnaissable tout en restant fidèle à la marque.\nOutils : Photoshop, Illustrator, Canva.\nDate : 2025 - 2026",
+        ratio: "1 / 1",
+        photos: [(window.__resources&&window.__resources.a_latribune_events_1_jpg||"./min/latribune-events-1.jpg"), (window.__resources&&window.__resources.a_latribune_events_2_jpg||"./min/latribune-events-2.jpg"), (window.__resources&&window.__resources.a_latribune_events_3_jpg||"./min/latribune-events-3.jpg"), (window.__resources&&window.__resources.a_latribune_events_4_jpg||"./min/latribune-events-4.jpg")] },
+      tiktok: { coverVideo: (window.__resources&&window.__resources.a_tiktok_video_mp4||"./assets/tiktok-video.mp4"), title: "TikTok Awards France - Participation avec la délégation La Tribune (2025)",
+        desc: "Projet : présente avec la délégation La Tribune à la cérémonie des TikTok Awards France, pour suivre les formats et les créateurs primés et en rapporter des pistes éditoriales.\nDate : 2025",
+        photos: [(window.__resources&&window.__resources.a_tiktok_1_jpg||"./min/tiktok-1.jpg"), (window.__resources&&window.__resources.a_tiktok_2_jpeg||"./min/tiktok-2.jpg")] },
+    };
+    const p = PROJECTS[this.state.project] || null;
+
+    const ABOUT_PHOTOS = [(window.__resources&&window.__resources.a_about_1_jpeg||"./min/about-1.jpg")];
+    const DOSSIERS = [
+      { title: "À propos", accent: "#A81F63", bg: "#F7D9E6", img: "",
+        blocks: [
+          { text: "J’aime transformer une idée en projet concret : imaginer, créer, expérimenter et surtout construire à plusieurs. Au fil de mes expériences académiques, professionnelles et personnelles, j’ai contribué à de nombreux projets créatifs, de la conception de concepts à la création de contenus." },
+          { text: "Je suis passionnée de photographie, que je pratique avec mon Leica D-Lux, toujours à la recherche d’un détail, d’une lumière ou d’un cadrage qui mérite d’être capturé." },
+          { text: "Et puis, il y a la musique : 22 playlists créées cette année. Oui, je compte. 🎧" },
+          { text: "Mes goûts vont de l’indie pop à la soul, du rock à l’électro, avec quelques morceaux beaucoup trop bons pour être écoutés à volume raisonnable dans le métro." },
+        ] },
+      { title: "Mon parcours professionnel", accent: "#416B3A", bg: "#D8E9AE", img: (window.__resources&&window.__resources.a_parcours_1_jpeg||"./min/parcours-1.jpg"),
+        tags: ["Études marketing", "Stratégie éditoriale", "Direction artistique", "Réseaux sociaux", "Création de contenus", "Gestion de projet", "Analyse de performances", "Communication de marque"],
+        blocks: [
+          { heading: "2025 — 2026 · La Tribune — CMA CGM", sub: "Chargée d’études & de conception marketing " },
+          { heading: "2023 — 2025 · Antalis", sub: "Assistante Social Media " },
+          { heading: "2023 · Perruche — Malte", sub: "Cheffe de projet marketing / communication " },
+        ] },
+      { title: "International experience 🇬🇧", accent: "#1F4E8C", bg: "#C9DCF2", img: (window.__resources&&window.__resources.a_about_2_jpeg||"./min/about-2.jpg"),
+        photos: [(window.__resources&&window.__resources.a_about_2_jpeg||"./min/about-2.jpg"), (window.__resources&&window.__resources.a_intl_1_jpeg||"./min/intl-1.jpg"), (window.__resources&&window.__resources.a_intl_2_jpeg||"./min/intl-2.jpg"), (window.__resources&&window.__resources.a_intl_3_jpeg||"./min/intl-3.jpg"), (window.__resources&&window.__resources.a_intl_4_jpg||"./min/intl-4.jpg")],
+        blocks: [
+          { text: "If there’s one thing that has always excited me, it’s the idea of discovering what’s beyond my everyday surroundings." },
+          { text: "I started my journey with a BTS in International Business, which took me to Granada, Spain, for three months. I joined a fashion company and helped with its international development. My first real taste of working abroad." },
+          { text: "A few months later, I was off again. During my Bachelor’s degree in International Business, I spent five months in Malta, working for another fashion brand on its art direction, social media and website." },
+          { text: "And because apparently one international experience was never enough, I also joined the Summer School at Nottingham Trent University. Living on a real British campus and meeting students from all over the world was an experience I won’t forget." },
+          { text: "Looking back, these experiences gave me much more than an international background. They pushed me to become more independent and confident. It taught me to feel at home even when everything around me is new. I think that’s what I love most about going abroad: you come back knowing a little more about the world, but also a little more about yourself. 🌍" },
+        ] },
+    ];
+    const open = this.state.open;
+    const folders = DOSSIERS.map((f, i) => {
+      const isOpen = open === i;
+      return {
+        title: f.title,
+        num: "(" + String(i + 1).padStart(2, "0") + ")",
+        onClick: () => this.setState({ open: isOpen ? -1 : i }),
+        panelStyle: {
+          position: "relative", zIndex: i + 1, background: f.bg, borderRadius: "34px",
+          borderTop: "1px solid " + f.accent + "33",
+          marginTop: i === 0 ? "0" : "-10px", overflow: "hidden",
+          boxShadow: isOpen ? "0 18px 44px rgba(90,6,50,.2)" : "0 2px 10px rgba(90,6,50,.06)",
+          transform: isOpen ? "translateY(0) scale(1)" : "scale(.995)",
+          transition: "box-shadow .7s " + ease + ", transform .7s " + ease + ", border-radius .7s " + ease,
+        },
+        headStyle: {
+          display: "flex", alignItems: "baseline", justifyContent: "space-between", gap: "20px",
+          cursor: "pointer", userSelect: "none",
+          padding: "clamp(20px, 2.6vw, 34px) clamp(22px, 3vw, 44px) clamp(18px, 2.2vw, 28px)",
+        },
+        titleStyle: F({ fontWeight: 700, fontSize: "clamp(26px, 4.2vw, 62px)", lineHeight: 1, letterSpacing: "-.035em", color: f.accent, minWidth: 0, overflowWrap: "break-word" }),
+        numStyle: F({ fontWeight: 700, fontSize: "clamp(22px, 3.4vw, 52px)", lineHeight: 1, letterSpacing: "-.035em", color: f.accent, opacity: isOpen ? 1 : .6, flex: "0 0 auto", transition: "opacity .55s ease" }),
+        bodyStyle: {
+          display: "grid", gridTemplateRows: isOpen ? "1fr" : "0fr", opacity: isOpen ? 1 : 0,
+          transition: "grid-template-rows .78s " + ease + ", opacity .55s ease .06s",
+        },
+        gridStyle: {
+          overflow: "hidden", display: "grid",
+          gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 300px), 1fr))",
+          gap: "clamp(20px, 3vw, 44px)", alignItems: "start",
+          padding: "0 clamp(22px, 3vw, 44px) clamp(24px, 3vw, 42px)",
+        },
+        blocks: f.blocks.map((bl) => ({
+          heading: bl.heading || "",
+          sub: bl.sub || "",
+          text: bl.text,
+          hStyle: F({ fontWeight: 700, fontSize: "clamp(15px, 1.4vw, 19px)", letterSpacing: "-.015em", color: f.accent }),
+          subStyle: F({ fontWeight: 600, fontSize: "clamp(13.5px, 1.2vw, 16px)", letterSpacing: "-.01em", color: f.accent, opacity: .85 }),
+          pStyle: F({ margin: 0, fontWeight: bl.heading ? 400 : 500, fontSize: "clamp(14.5px, 1.3vw, 18px)", lineHeight: 1.45, letterSpacing: "-.012em", color: f.accent, textAlign: "justify", hyphens: "auto" }),
+        })),
+        tags: (f.tags || []).map((label) => ({
+          label,
+          style: F({ display: "inline-block", padding: "7px 14px", borderRadius: "999px", background: "#FFFDF5", border: "1px solid " + f.accent + "33", color: f.accent, fontWeight: 600, fontSize: "clamp(12.5px, 1.05vw, 14.5px)", letterSpacing: "-.01em", whiteSpace: "nowrap" }),
+        })),
+        hasMedia: true,
+        mediaWrapStyle: { position: "relative", marginTop: "10px" },
+        mediaStyle: {
+          position: "relative", overflow: "hidden", width: "100%", aspectRatio: "4 / 3",
+          borderRadius: "18px", background: "#FFFDF5",
+          backgroundImage: i === 0 ? "none" : "url(" + f.img + ")",
+          backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat",
+        },
+        slides: (i === 0 ? ABOUT_PHOTOS : (f.photos || [])).map((src, k, arr) => ({
+          style: {
+            position: "absolute", inset: 0,
+            backgroundImage: "url(" + src + ")", backgroundSize: "cover", backgroundPosition: "center",
+            borderRadius: "18px",
+            opacity: (this.state.slide % arr.length) === k ? 1 : 0,
+            transition: "opacity 1.1s ease",
+          },
+        })),
+      };
+    });
+
+    const MENU = [
+      { label: "Projets professionnels", text: "Projets menés en entreprise, en stage comme en alternance : campagnes, contenus et communication de marque, du concept à la réalisation." },
+      { label: "Projets scolaires", text: "Travaux académiques et échanges. " },
+      { label: "Projets personnels", text: "Séries photo et formats testés en solo.\n" },
+    ];
+    const CATS = [
+      { key: "pro", projects: ["latribune", "tiktok", "antalis", "perruche-social", "perruche", "empreintes"] },
+      { key: "scolaire", projects: ["ntu", "bourbon"] },
+      { key: "perso", projects: ["fruits", "nyc"] },
+    ];
+    const catIndex = typeof this.state.cat === "number" ? this.state.cat : -1;
+    const cat = catIndex >= 0 ? CATS[catIndex] : null;
+    const sub = this.state.sub;
+    const menu = MENU.map((m, k) => ({
+      label: m.label,
+      text: m.text,
+      onClick: () => this.setState({ cat: k }),
+      style: F({
+        fontWeight: 700, fontSize: "clamp(28px, 5vw, 72px)", lineHeight: 1.05,
+        letterSpacing: "-.04em", color: "#A0165C", textAlign: "center", cursor: "pointer",
+        textDecorationLine: "underline", textDecorationThickness: sub === k ? "5px" : "2px", textUnderlineOffset: "10px",
+        transformOrigin: "center", userSelect: "none",
+        transition: "transform .35s cubic-bezier(.2,1.4,.4,1)",
+      }),
+      bodyStyle: {
+        display: "grid", gridTemplateRows: sub === k ? "1fr" : "0fr", opacity: sub === k ? 1 : 0,
+        transition: "grid-template-rows .5s " + ease + ", opacity .35s ease", width: "100%",
+      },
+      textStyle: F({
+        overflow: "hidden", margin: "0 auto", maxWidth: "52ch", fontWeight: 500,
+        fontSize: "clamp(15px, 1.4vw, 19px)", lineHeight: 1.5, letterSpacing: "-.012em",
+        color: "#8C3A63", textAlign: "center", padding: "12px 0 4px",
+      }),
+    }));
+
+    return {
+      folders,
+      menu,
+      catOpen: !!cat,
+      catTitle: cat ? MENU[catIndex].label : "",
+      catText: cat ? MENU[catIndex].text : "",
+      catEmpty: !!cat && cat.projects.length === 0,
+      catCards: cat ? cat.projects.map((key) => {
+        const pr = PROJECTS[key];
+        return {
+          title: pr.title,
+          onClick: () => this.setState({ project: key, from: "cat" }),
+          video: this.vid(pr.coverVideo || (pr.video && pr.videoFirst ? pr.video : "")),
+          clip: pr.coverClip || 0,
+          thumbStyle: {
+            position: "relative", overflow: "hidden",
+            width: "100%", aspectRatio: "4 / 5", borderRadius: "4px",
+            border: "3px solid #FFFACD",
+            backgroundImage: "url(" + (pr.cover || pr.photos[0]) + ")",
+            backgroundSize: pr.contain ? "contain" : "cover",
+            backgroundPosition: pr.focus || "center", backgroundRepeat: "no-repeat",
+            backgroundColor: "#FDF3CE",
+            transition: "transform .4s cubic-bezier(.22,1,.36,1)",
+          },
+          labelStyle: F({ fontWeight: 600, fontSize: "clamp(14px, 1.3vw, 17px)", letterSpacing: "-.015em", color: "#FFFACD" }),
+        };
+      }) : [],
+      closeCat: () => this.setState({ cat: -1, project: null }),
+      modalOpen: !!p,
+      modalHero: !!(p && p.hero),
+      modalGridStyle: {
+        display: "grid",
+        gridTemplateColumns: p && p.wide ? "minmax(0, 1fr)" : p && p.photos.length === 4 ? "repeat(2, minmax(0, 1fr))" : "repeat(auto-fit, minmax(min(100%, 230px), 1fr))",
+        gap: "clamp(10px, 1.4vw, 16px)",
+        alignItems: "stretch",
+      },
+      modalHeroStyle: {
+        width: "100%", aspectRatio: "3 / 2", borderRadius: "4px",
+        marginBottom: "clamp(10px, 1.4vw, 16px)",
+        backgroundImage: p && p.hero ? "url(" + p.hero + ")" : "none",
+        backgroundSize: "cover", backgroundPosition: "center", backgroundRepeat: "no-repeat",
+      },
+      tiktokVideo: this.vid((window.__resources&&window.__resources.a_tiktok_video_mp4||"./assets/tiktok-video.mp4")),
+      nycVideo: null,
+      socialVideo: null,
+      modalVideoTop: !!(p && p.video && p.videoFirst && this.vid(p.video)),
+      modalVideoBottom: !!(p && p.video && !p.videoFirst && this.vid(p.video)),
+      modalVideoSrc: p && p.video ? this.vid(p.video) : "",
+      modalPdf: !!(p && p.pdf),
+      modalPdfSrc: p && p.pdf ? p.pdf : "",
+      modalCell: { position: "relative", width: "100%", aspectRatio: p && p.ratio ? p.ratio : p && p.wide ? "5 / 4" : p && p.photos.length === 1 && p.contain ? "6 / 5" : "3 / 4", overflow: "hidden", borderRadius: "4px" },
+      modalTitle: p ? p.title : "",
+      modalDesc: p ? p.desc : "",
+      modalPhotos: p ? p.photos.map((src, i) => {
+        const m = (p.media && p.media[i]) || {};
+        return {
+          cell: { position: "relative", width: "100%", aspectRatio: m.ratio || (p.ratio ? p.ratio : p.wide ? "5 / 4" : p.photos.length === 1 && p.contain ? "6 / 5" : "3 / 4"), overflow: "hidden", borderRadius: "4px" },
+          style: {
+            position: "absolute", inset: 0,
+            backgroundImage: "url(" + src + ")",
+            backgroundSize: m.fit || (p.contain ? "contain" : "cover"),
+            backgroundPosition: m.pos || "center", backgroundRepeat: "no-repeat",
+          },
+        };
+      }) : [],
+      openProject: (e) => {
+        const el = e.target.closest("[data-project]");
+        if (el) this.setState({ project: el.getAttribute("data-project"), from: "carousel" });
+      },
+      closeProject: () => this.setState({ project: null }),
+      stopClose: (e) => e.stopPropagation(),
+    };
+  }
+}
+</script>
+
+
+</body></html>
