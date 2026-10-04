@@ -46,7 +46,7 @@
     <div style="display: flex; align-items: center; justify-content: space-between; gap: clamp(10px, 2vw, 34px); flex-wrap: wrap; animation: m-rise .9s cubic-bezier(.2,.9,.2,1) .35s both;">
       <span style="font-weight: 600; font-size: clamp(12.5px, 1.3vw, 18px); letter-spacing: -.015em; color: #FFFACD">Social media &amp; direction artistique</span>
       <img src="assets/xs-ic-sparkle.png" alt="" style="width: 37px; height: 40px; animation: m-twinkle 3.4s ease-in-out infinite">
-      <span style="font-size: clamp(12.5px, 1.3vw, 18px); letter-spacing: -.01em; color: #FFFACD; font-family: -apple-system; font-weight: 600">Imaginer, créer et amplifier votre présence digitale</span>
+      <span style="font-size: clamp(12.5px, 1.3vw, 18px); letter-spacing: -.01em; color: #FFFACD; font-weight: 600">Imaginer, créer et amplifier votre présence digitale</span>
     </div>
   </section><section id="vitrine" style="position: relative; flex: 1 1 auto; display: flex; flex-direction: column; justify-content: center; padding: clamp(8px, 1.6vw, 20px) 0 0;">
     
@@ -228,7 +228,7 @@
     <img src="assets/sm-ic-phone.png" alt="" style="position: absolute; right: 4%; bottom: clamp(20px, 4vw, 54px); width: clamp(76px, 9vw, 128px); opacity: .9; animation: m-bob 6s ease-in-out infinite; pointer-events: none;">
     <div style="position: relative; max-width: 700px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; gap: clamp(18px, 2.4vw, 26px);">
       <span style="font-size: 12.5px; letter-spacing: .14em; text-transform: uppercase; color: #FFFACD">Contact</span>
-      <h2 style="margin: 0; font-weight: 600; font-size: clamp(38px, 6.4vw, 86px); line-height: 1; letter-spacing: -.04em; color: #FFFACD; text-wrap: balance">On se <span style="display: inline-block; animation: m-wobble 3.2s ease-in-out infinite;">parle</span> ?</h2>
+      <h2 style="margin: 0; font-weight: 600; font-size: clamp(38px, 6.4vw, 86px); line-height: 1; letter-spacing: -.04em; color: #FFFACD; text-wrap: balance">Et si on travaillait <span style="display: inline-block; animation: m-wobble 3.2s ease-in-out infinite;">ensemble</span> ?</h2>
       <p style="margin: 0; max-width: 46ch; font-size: clamp(15px, 1.4vw, 18px); line-height: 1.5; letter-spacing: -.01em; color: #FFFACD; text-wrap: pretty">Missions freelance, collaborations ou postes en interne : le plus simple est de m'écrire sur LinkedIn.</p>
       <div style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 14px; margin-top: 6px;">
         <a href="{{ linkedin }}" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 10px; background: #FFFACD; color: #A0165C; padding: 15px 30px; border-radius: 999px; font-weight: 500; font-size: 16px; letter-spacing: -.01em; text-decoration-line: none; transition: transform .3s cubic-bezier(.2,1.5,.4,1), background .3s;" style-hover="background: #FFFFFF; transform: translateY(-3px);">Marion sur LinkedIn</a>
@@ -316,7 +316,7 @@ class Component extends DCLogic {
       ntu: { cover: (window.__resources&&window.__resources.a_ntu_atelier_jpg||"./min/ntu-atelier.jpg"), focus: "78% center", title: "NTU (Nottingham Trent University) — Global Summer School Program for Design & Innovation in Business",
         desc: "Conception de produits innovants en équipe multiculturelle et cours de photographie\nDate : Eté 2024",
         photos: [(window.__resources&&window.__resources.a_ntu_equipe_jpg||"./min/ntu-equipe.jpg"), (window.__resources&&window.__resources.a_ntu_moodboard_png||"./min/ntu-moodboard.jpg"), (window.__resources&&window.__resources.a_ntu_maquettes_jpg||"./min/ntu-maquettes.jpg"), (window.__resources&&window.__resources.a_ntu_campus_jpg||"./min/ntu-campus.jpg")] },
-      bourbon: { cover: (window.__resources&&window.__resources.a_bourbon_catalogue_jpg||"./min/bourbon-catalogue.jpg"), focus: "center 30%", title: "Excellence Bourbon - Etude du marché de la vanille et création d'un catalogue produits", desc: "Date : Janvier 2021",
+      bourbon: { cover: (window.__resources&&window.__resources.a_bourbon_catalogue_jpg||"./min/bourbon-catalogue.jpg"), focus: "center 30%", title: "Excellence Bourbon - Etude de marché et création d'un catalogue produits", desc: "Contexte : Étude du marché sur l'exportation de la vanille bourbon en Angleterre\nDate : Janvier 2021",
         contain: true, wide: true, photos: [(window.__resources&&window.__resources.a_bourbon_etude_1_png||"./min/bourbon-etude-1.jpg"), (window.__resources&&window.__resources.a_bourbon_etude_2_png||"./min/bourbon-etude-2.jpg")] },
       empreintes: { cover: (window.__resources&&window.__resources.a_empreintes_1_png||"./min/empreintes-1.jpg"), focus: "center 70%", title: "Empreintes d'Avenir - Sensibiliser aux gestes verts (2023)", desc: "Projet : six mois au sein d'Empreintes d'Avenir à créer différents contenus de sensibilisation, comme une carte de vœux vidéo, des publications LinkedIn et une newsletter, pour rappeler pourquoi chaque petit geste compte.\nDate : 2022 - 2023",
         contain: true,
@@ -330,8 +330,8 @@ class Component extends DCLogic {
         desc: "Projet : créer les visuels de promotion des évènements organisés par La Tribune et définir leur identité graphique, du choix des couleurs aux typographies et aux traitements d'image, pour que chaque rendez-vous reste reconnaissable tout en restant fidèle à la marque.\nOutils : Photoshop, Illustrator, Canva.\nDate : 2025 - 2026",
         ratio: "1 / 1",
         photos: [(window.__resources&&window.__resources.a_latribune_events_1_jpg||"./min/latribune-events-1.jpg"), (window.__resources&&window.__resources.a_latribune_events_2_jpg||"./min/latribune-events-2.jpg"), (window.__resources&&window.__resources.a_latribune_events_3_jpg||"./min/latribune-events-3.jpg"), (window.__resources&&window.__resources.a_latribune_events_4_jpg||"./min/latribune-events-4.jpg")] },
-      tiktok: { coverVideo: (window.__resources&&window.__resources.a_tiktok_video_mp4||"./assets/tiktok-video.mp4"), title: "TikTok Awards France - Participation avec la délégation La Tribune (2025)",
-        desc: "Projet : présente avec la délégation La Tribune à la cérémonie des TikTok Awards France, pour suivre les formats et les créateurs primés et en rapporter des pistes éditoriales.\nDate : 2025",
+      tiktok: { coverVideo: (window.__resources&&window.__resources.a_tiktok_video_mp4||"./assets/tiktok-video.mp4"), title: "Participation aux TikTok Awards France (2025)",
+        desc: "Participation aux Tiktok Awards France 2025\nDate : 2025",
         photos: [(window.__resources&&window.__resources.a_tiktok_1_jpg||"./min/tiktok-1.jpg"), (window.__resources&&window.__resources.a_tiktok_2_jpeg||"./min/tiktok-2.jpg")] },
     };
     const p = PROJECTS[this.state.project] || null;
@@ -428,7 +428,7 @@ class Component extends DCLogic {
 
     const MENU = [
       { label: "Projets professionnels", text: "Projets menés en entreprise, en stage comme en alternance : campagnes, contenus et communication de marque, du concept à la réalisation." },
-      { label: "Projets scolaires", text: "Travaux académiques et échanges. " },
+      { label: "Projets académiques", text: "Travaux académiques et échanges. " },
       { label: "Projets personnels", text: "Séries photo et formats testés en solo.\n" },
     ];
     const CATS = [
