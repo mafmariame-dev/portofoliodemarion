@@ -313,6 +313,10 @@ class Component extends DCLogic {
         contain: true, photos: [(window.__resources&&window.__resources.a_perruche_social_1_png||"./min/perruche-social-1.jpg"), (window.__resources&&window.__resources.a_perruche_social_2_png||"./min/perruche-social-2.jpg")] },
       fruits: { cover: (window.__resources&&window.__resources.a_rhode_cover_png||"./min/rhode-cover.jpg"), hero: (window.__resources&&window.__resources.a_rhode_campagne_png||"./min/rhode-campagne.jpg"), title: "Rhode - Le fruit comme matière (mock campaign)", desc: "Projet : Penser le fruit autour des produits cosmétique. Chaque teinte trouve son fruit, sa texture et sa lumière.\nOutils : Photoshop, Illustrator, ChatGPT.\nDate : septembre 2025.",
         photos: [(window.__resources&&window.__resources.a_rhode_peche_png||"./min/rhode-peche.jpg"), (window.__resources&&window.__resources.a_rhode_cerise_png||"./min/rhode-cerise.jpg"), (window.__resources&&window.__resources.a_rhode_pistache_png||"./min/rhode-pistache.jpg")] },
+      mockcampaigns: { cover: (window.__resources&&window.__resources.a_rhode_cover_png||"./min/rhode-cover.jpg"), title: "Mock campaigns", group: true, items: ["fruits", "baobab-madagascar"] },
+      "baobab-madagascar": { cover: "./min/baobab-madagascar-1.jpg", title: "Baobab Collection - Madagascar Terre Rouge",
+        desc: "Cette campagne créative fictive imagine une édition exclusive de Baobab Collection inspirée de Madagascar, où le zébu, symbole emblématique de l’île, s’invite sur une bougie de luxe pour célébrer la richesse culturelle et la beauté naturelle malgaches à travers un design raffiné et authentique.",
+        photos: ["./min/baobab-madagascar-1.jpg", "./min/baobab-madagascar-2.jpg"] },
       ntu: { cover: (window.__resources&&window.__resources.a_ntu_atelier_jpg||"./min/ntu-atelier.jpg"), focus: "78% center", title: "NTU (Nottingham Trent University) — Global Summer School Program for Design & Innovation in Business",
         desc: "Conception de produits innovants en équipe multiculturelle et cours de photographie\nDate : Eté 2024",
         photos: [(window.__resources&&window.__resources.a_ntu_equipe_jpg||"./min/ntu-equipe.jpg"), (window.__resources&&window.__resources.a_ntu_moodboard_png||"./min/ntu-moodboard.jpg"), (window.__resources&&window.__resources.a_ntu_maquettes_jpg||"./min/ntu-maquettes.jpg"), (window.__resources&&window.__resources.a_ntu_campus_jpg||"./min/ntu-campus.jpg")] },
@@ -443,7 +447,7 @@ class Component extends DCLogic {
     const CATS = [
       { key: "pro", projects: ["latribune", "tiktok", "antalis", "perruche-social", "perruche", "empreintes"] },
       { key: "scolaire", projects: ["ntu", "bourbon"] },
-      { key: "perso", projects: ["fruits", "nyc", "invitations"] },
+      { key: "perso", projects: ["mockcampaigns", "nyc", "invitations"] },
     ];
     const catIndex = typeof this.state.cat === "number" ? this.state.cat : -1;
     const cat = catIndex >= 0 ? CATS[catIndex] : null;
