@@ -333,6 +333,9 @@ class Component extends DCLogic {
       tiktok: { coverVideo: (window.__resources&&window.__resources.a_tiktok_video_mp4||"./assets/tiktok-video.mp4"), title: "Participation aux TikTok Awards France (2025)",
         desc: "Participation aux Tiktok Awards France 2025\nDate : 2025",
         photos: [(window.__resources&&window.__resources.a_tiktok_1_jpg||"./min/tiktok-1.jpg"), (window.__resources&&window.__resources.a_tiktok_2_jpeg||"./min/tiktok-2.jpg")] },
+      invitations: { cover: "./min/invitations-cover.jpg", title: "Invitations", group: true, items: ["baby-shower"] },
+      "baby-shower": { cover: "./min/invit-baby-shower-2.jpg", title: "Baby shower", contain: true,
+        photos: ["./min/invit-baby-shower-1.jpg", "./min/invit-baby-shower-2.jpg"] },
     };
     const p = PROJECTS[this.state.project] || null;
 
@@ -434,15 +437,17 @@ class Component extends DCLogic {
     const CATS = [
       { key: "pro", projects: ["latribune", "tiktok", "antalis", "perruche-social", "perruche", "empreintes"] },
       { key: "scolaire", projects: ["ntu", "bourbon"] },
-      { key: "perso", projects: ["fruits", "nyc"] },
+      { key: "perso", projects: ["fruits", "nyc", "invitations"] },
     ];
     const catIndex = typeof this.state.cat === "number" ? this.state.cat : -1;
     const cat = catIndex >= 0 ? CATS[catIndex] : null;
+    const subCatKey = this.state.subCat || null;
+    const subGroup = subCatKey ? PROJECTS[subCatKey] : null;
     const sub = this.state.sub;
     const menu = MENU.map((m, k) => ({
       label: m.label,
       text: m.text,
-      onClick: () => this.setState({ cat: k }),
+      onClick: () => this.setState({ cat: k, subCat: null, project: null }),
       style: F({
         fontWeight: 700, fontSize: "clamp(28px, 5vw, 72px)", lineHeight: 1.05,
         letterSpacing: "-.04em", color: "#A0165C", textAlign: "center", cursor: "pointer",
@@ -465,14 +470,14 @@ class Component extends DCLogic {
       folders,
       menu,
       catOpen: !!cat,
-      catTitle: cat ? MENU[catIndex].label : "",
-      catText: cat ? MENU[catIndex].text : "",
-      catEmpty: !!cat && cat.projects.length === 0,
-      catCards: cat ? cat.projects.map((key) => {
+      catTitle: subGroup ? subGroup.title : cat ? MENU[catIndex].label : "",
+      catText: subGroup ? "" : cat ? MENU[catIndex].text : "",
+      catEmpty: !subGroup && !!cat && cat.projects.length === 0,
+      catCards: (subGroup ? subGroup.items : cat ? cat.projects : []).map((key) => {
         const pr = PROJECTS[key];
         return {
           title: pr.title,
-          onClick: () => this.setState({ project: key, from: "cat" }),
+          onClick: pr.group ? () => this.setState({ subCat: key }) : () => this.setState({ project: key, from: "cat" }),
           video: this.vid(pr.coverVideo || (pr.video && pr.videoFirst ? pr.video : "")),
           clip: pr.coverClip || 0,
           thumbStyle: {
@@ -487,8 +492,8 @@ class Component extends DCLogic {
           },
           labelStyle: F({ fontWeight: 600, fontSize: "clamp(14px, 1.3vw, 17px)", letterSpacing: "-.015em", color: "#FFFACD" }),
         };
-      }) : [],
-      closeCat: () => this.setState({ cat: -1, project: null }),
+      }),
+      closeCat: () => this.setState(subGroup ? { subCat: null, project: null } : { cat: -1, project: null, subCat: null }),
       modalOpen: !!p,
       modalHero: !!(p && p.hero),
       modalGridStyle: {
