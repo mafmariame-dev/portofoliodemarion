@@ -333,13 +333,15 @@ class Component extends DCLogic {
       tiktok: { coverVideo: (window.__resources&&window.__resources.a_tiktok_video_mp4||"./assets/tiktok-video.mp4"), title: "Participation aux TikTok Awards France (2025)",
         desc: "Participation aux Tiktok Awards France 2025\nDate : 2025",
         photos: [(window.__resources&&window.__resources.a_tiktok_1_jpg||"./min/tiktok-1.jpg"), (window.__resources&&window.__resources.a_tiktok_2_jpeg||"./min/tiktok-2.jpg")] },
-      invitations: { cover: "./min/invitations-cover.jpg", title: "Faire-part", group: true, items: ["baby-shower", "cremaillere", "anniversaire"] },
+      invitations: { cover: "./min/invitations-cover.jpg", title: "Faire-part", group: true, items: ["baby-shower", "cremaillere", "anniversaire", "halloween"] },
       "baby-shower": { cover: "./min/invit-baby-shower-2.jpg", title: "Baby shower", contain: true,
         photos: ["./min/invit-baby-shower-1.jpg", "./min/invit-baby-shower-2.jpg"] },
       cremaillere: { cover: "./min/invit-cremaillere-2.jpg", title: "Crémaillère", contain: true,
         photos: ["./min/invit-cremaillere-1.jpg", "./min/invit-cremaillere-2.jpg"] },
       anniversaire: { cover: "./min/invit-anniversaire-2.jpg", title: "Anniversaire", contain: true,
         photos: ["./min/invit-anniversaire-1.jpg", "./min/invit-anniversaire-2.jpg"] },
+      halloween: { cover: "./min/invit-halloween-2.jpg", title: "Halloween", contain: true,
+        photos: ["./min/invit-halloween-1.jpg", "./min/invit-halloween-2.jpg"] },
     };
     const p = PROJECTS[this.state.project] || null;
 
